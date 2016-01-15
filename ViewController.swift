@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     
     var startTimer : NSDate?
-    var stopTimer : NSDate?
     var currentTimer : NSDate?
     var duration : NSTimeInterval?
     var timer : NSTimer?
@@ -28,13 +27,6 @@ class ViewController: UIViewController {
             timer = NSTimer()
             timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: "updateTimer", userInfo: nil, repeats: true)
             startTimer = NSDate()
-            
-            if stopTimer != nil {//Calculate the duration eslapse from start to the stop, subtract  from new start
-                
-            }
-            else { //new start time
-                
-            }
         }
         else {
             //Don't start Timer
